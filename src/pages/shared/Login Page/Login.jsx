@@ -3,12 +3,19 @@ import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password);
+  };
   return (
     <div>
       <div>
         <div className="hero min-h-screen bg-base-200">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <p className=" text-center font-bold">Please Login</p>
               <div className="form-control">
                 <label className="label">
