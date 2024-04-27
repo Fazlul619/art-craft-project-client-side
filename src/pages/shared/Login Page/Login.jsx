@@ -3,11 +3,36 @@ import { FaGitlab } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, GoogleSignIn, GitHubSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const handleGoogleSignIn = () => {
+    GoogleSignIn()
+      .then((result) => {
+        console.log(result);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error(error.message);
+      });
+  };
+  const handleGitHubSignIn = () => {
+    GitHubSignIn()
+      .then((result) => {
+        console.log(result);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error(error.message);
+      });
+  };
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -21,9 +46,11 @@ const Login = () => {
 
         // navigate location
         navigate(location?.state ? location.state : "/");
+        toast.success("User Created Successfully");
       })
       .catch((error) => {
         console.error(error);
+        toast.error(error.message);
       });
   };
   return (
@@ -74,10 +101,10 @@ const Login = () => {
             </p>
             <div className="card-body text-2xl items-center ">
               <p>
-                <button className="mx-5">
+                <button onClick={handleGoogleSignIn} className="mx-5">
                   <FcGoogle />
                 </button>
-                <button>
+                <button onClick={handleGitHubSignIn}>
                   <FaGitlab />
                 </button>
               </p>
@@ -85,6 +112,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
