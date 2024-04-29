@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -60,7 +60,9 @@ const MyArtCraftList = () => {
               <h2 className="card-title">New movie is released!</h2>
               <p>Click the button to watch on Jetflix app.</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Update </button>
+                <Link to={`/updatedItems/${data._id}`}>
+                  <button className="btn btn-primary">View Details</button>
+                </Link>
                 <button
                   onClick={() => handleDelete(data._id)}
                   className="btn btn-error"
