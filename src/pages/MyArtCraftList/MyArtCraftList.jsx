@@ -80,12 +80,16 @@ const MyArtCraftList = () => {
       {filterBasedOnCustomization.map((data) => {
         return (
           <div key={data._id} className="card card-side bg-base-100 shadow-xl">
-            <figure>
-              <img className="w-96" src={data.imageUrl} alt="Movie" />
+            <figure className="w-96">
+              <img className="p-3" src={data.imageUrl} alt="Movie" />
             </figure>
+
             <div className="card-body">
-              <h2 className="card-title">New movie is released!</h2>
-              <p>Click the button to watch on Jetflix app.</p>
+              <h2 className="card-title font-bold">{data.itemName}</h2>
+              <p>${data.price}</p>
+              <p>Rating: {data.rating}</p>
+              <p>customization: {data.customization}</p>
+              <p>Stock Status: {data.Stock}</p>
               <div className="card-actions justify-end">
                 <Link to={`/updatedItems/${data._id}`}>
                   <button className="btn btn-primary">View Details</button>

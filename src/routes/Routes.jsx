@@ -9,11 +9,13 @@ import MyArtCraftList from "../pages/MyArtCraftList/MyArtCraftList";
 import PrivateRoutes from "./PrivateRoutes";
 import ItemDetails from "../pages/ItemDetails/ItemDetails";
 import UpdatedItems from "../pages/Updated Craft Items/UpdatedItems";
+import Error from "../pages/Error Page/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
