@@ -5,8 +5,7 @@ const Home = () => {
   const craftItems = useLoaderData();
   return (
     <div>
-      <h1>craft:{craftItems.length}</h1>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8 w-[90vw] mx-auto mt-8">
         {craftItems.map((craftItem) => (
           <CraftCard key={craftItem._id} craftItem={craftItem}></CraftCard>
         ))}
