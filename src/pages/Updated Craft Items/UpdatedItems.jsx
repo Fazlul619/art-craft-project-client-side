@@ -72,7 +72,7 @@ const UpdatedItems = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success",
             text: "Craft Item Updated Successfully",

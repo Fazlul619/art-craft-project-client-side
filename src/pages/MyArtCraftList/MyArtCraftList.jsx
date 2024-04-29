@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
@@ -48,9 +48,36 @@ const MyArtCraftList = () => {
     });
   };
 
+  const [customization, setCustomization] = useState("");
+
+  const handleCustomizationChange = (e) => {
+    setCustomization(e.target.value);
+  };
+
+  const filterBasedOnCustomization =
+    customization && customization !== "please select"
+      ? filteredData.filter((item) => item.customization === customization)
+      : filteredData;
+
   return (
-    <div>
-      {filteredData.map((data) => {
+    <div className="w-[90vw] mx-auto space-y-6">
+      <div className="w-fit mx-auto flex flex-col gap-4 my-8">
+        <label className="text-2xl font-medium" htmlFor="customization">
+          Customization?
+        </label>
+        <select
+          id="customization"
+          value={customization}
+          onChange={handleCustomizationChange}
+          className="bg-green-200 px-3 py-2 rounded-md text-black"
+        >
+          <option value="please select">Please select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      {filterBasedOnCustomization.map((data) => {
         return (
           <div key={data._id} className="card card-side bg-base-100 shadow-xl">
             <figure>

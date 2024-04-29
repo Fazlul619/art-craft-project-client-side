@@ -28,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/AllArtCraftItems",
         element: <AllArtCraftItems></AllArtCraftItems>,
+        loader: () => fetch("http://localhost:5000/addCraftItems"),
       },
       {
         path: "/AddCraftItem",
