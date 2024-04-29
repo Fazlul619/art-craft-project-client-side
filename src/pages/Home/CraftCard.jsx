@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const CraftCard = ({ craftItem }) => {
   const {
+    _id,
     imageUrl,
     itemName,
     subcategoryName,
@@ -39,7 +40,7 @@ const CraftCard = ({ craftItem }) => {
           <span className="flex items-center gap-1">{stars}</span>
           <p>{price} $</p>
           <Link
-            to=""
+            to={`/itemDetails/${_id}`}
             className="bg-blue-200 rounded-md border-none outline-none px-2 py-1"
           >
             View Details
