@@ -5,10 +5,10 @@ const Footer = () => {
         <footer className="footer grid-rows-2 p-10 bg-neutral text-neutral-content mt-20">
           <nav>
             <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Property Listings</a>
-            <a className="link link-hover">Interior Design Consultation</a>
-            <a className="link link-hover">Real Estate Marketing</a>
-            <a className="link link-hover">Property Advertising</a>
+            <a className="link link-hover">Crafty Creations Corner</a>
+            <a className="link link-hover">Artisanal Expressions Hub</a>
+            <a className="link link-hover">Creative Craftworks Avenue</a>
+            <a className="link link-hover">Crafters Haven Hub</a>
           </nav>
           <nav>
             <h6 className="footer-title">Company</h6>
@@ -47,15 +47,19 @@ const Footer = () => {
         </footer>
         <footer className="footer px-10 py-4 border-t text-white border-base-300 bg-neutral">
           <aside className="items-center grid-flow-col">
-            <img
-              className=" rounded-xl"
-              src="https://i.ibb.co/L9dyPvn/fi-9073032.png"
-              alt=""
-            />
+            <div className="w-7 h-7 bg-white rounded-md">
+              <img
+                src="https://i.ibb.co/DRHMrbf/9859772-craft-wood-chisel-statue-sculpture-icon.pnghttps://i.ibb.co/XbznGHw/9859772-craft-wood-chisel-statue-sculpture-icon-1.png"
+                alt=""
+              />
+            </div>
             <p>
               Craftopia Haven <br />
               Delivering trusted Craft Items since 2024
             </p>
+          </aside>
+          <aside>
+            <p>Copyright © 2024 - All right reserved by Craftopia Haven</p>
           </aside>
           <nav className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">

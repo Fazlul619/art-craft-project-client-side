@@ -6,10 +6,7 @@ const Error = () => {
       <div>
         <div className="card w-96 bg-base-100 shadow-xl mx-auto mt-36 border">
           <figure className="">
-            <img
-              src="https://i.ibb.co/fDspVxp/404-page-cover.jpg"
-              alt="404 Error"
-            />
+            <img src="https://i.ibb.co/r4trG56/404-error.jpg" alt="404 Error" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title font-bold"> 404 Error!</h2>

@@ -58,7 +58,14 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className=" text-xl">Craftopia Haven</a>
+          <div className="w-7 h-7">
+            <img
+              src="https://i.ibb.co/DRHMrbf/9859772-craft-wood-chisel-statue-sculpture-icon.pnghttps://i.ibb.co/XbznGHw/9859772-craft-wood-chisel-statue-sculpture-icon-1.png"
+              alt=""
+            />
+          </div>
+
+          <a className=" text-xl font-bold">Craftopia Haven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -86,18 +93,13 @@ const Navbar = () => {
               tabIndex={0}
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
+              {user ? (
+                <button onClick={handleSignOut} className="btn">
+                  SIGN OUT
+                </button>
+              ) : (
+                "In"
+              )}
             </ul>
           </div>
           {user ? (

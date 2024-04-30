@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image_url": "https://i.ibb.co/3WB29ZJ/pic-1.png",
+    "opinion": "Great service! I found my perfect home within days. A good website for estate property ",
+    "name": "John Doe",
+    "designation": "Software Engineer"
+  },
+  {
+    "id": 2,
+    "image_url": "https://i.ibb.co/9YgyfX1/pic-2.png",
+    "opinion": "Amazing experience. The team went above and beyond to help me find the right property.",
+    "name": "Alice Smith",
+    "designation": "Marketing Manager"
+  },
+  {
+    "id": 3,
+    "image_url": "https://i.ibb.co/hF2h4Xv/pic-3.jpg",
+    "opinion": "Highly recommended! Professional and friendly staff.A good website for estate property",
+    "name": "Michael Johnson",
+    "designation": "Financial Analyst"
+  },
+  {
+    "id": 4,
+    "image_url": "https://i.ibb.co/dtptBFg/pic-4.jpg",
+    "opinion": "Excellent service. They made the whole process smooth and hassle-free.",
+    "name": "Emily Brown",
+    "designation": "Teacher"
+  },
+  {
+    "id": 5,
+    "image_url": "https://i.ibb.co/8PZqYpk/pic-5.jpg",
+    "opinion": "I'm impressed by the quality of service. Will definitely come back for future real estate needs.",
+    "name": "David Wilson",
+    "designation": "Accountant"
+  },
+  {
+    "id": 6,
+    "image_url": "https://i.ibb.co/jGN3qZM/pic-6.png",
+    "opinion": "A big thank you to the team! They helped me find my dream home within my budget.",
+    "name": "Sarah Jones",
+    "designation": "Project Manager"
+  }
+]
