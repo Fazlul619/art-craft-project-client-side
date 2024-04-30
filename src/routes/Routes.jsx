@@ -10,6 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import ItemDetails from "../pages/ItemDetails/ItemDetails";
 import UpdatedItems from "../pages/Updated Craft Items/UpdatedItems";
 import Error from "../pages/Error Page/Error";
+import ArtCraftItems from "../pages/ArtCraftItemsDetails/ArtCraftItems";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
         path: "/AllArtCraftItems",
         element: <AllArtCraftItems></AllArtCraftItems>,
         loader: () => fetch("http://localhost:5000/addCraftItems"),
+      },
+      {
+        path: "/artCraftItems/:id",
+        element: <ArtCraftItems />,
+        loader: () => fetch("http://localhost:5000/artCraftItems"),
       },
       {
         path: "/AddCraftItem",

@@ -53,8 +53,8 @@ const Footer = () => {
               alt=""
             />
             <p>
-              Dream Scape Properties. <br />
-              Delivering trusted properties since 2024
+              Craftopia Haven <br />
+              Delivering trusted Craft Items since 2024
             </p>
           </aside>
           <nav className="md:place-self-center md:justify-self-end">
