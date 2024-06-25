@@ -21,22 +21,34 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/addCraftItems"),
+        loader: () =>
+          fetch(
+            "https://assignment-10-server-side-ten.vercel.app/addCraftItems"
+          ),
       },
       {
         path: "/itemDetails/:id",
         element: <ItemDetails />,
-        loader: () => fetch("http://localhost:5000/addCraftItems"),
+        loader: () =>
+          fetch(
+            "https://assignment-10-server-side-ten.vercel.app/addCraftItems"
+          ),
       },
       {
         path: "/AllArtCraftItems",
         element: <AllArtCraftItems></AllArtCraftItems>,
-        loader: () => fetch("http://localhost:5000/addCraftItems"),
+        loader: () =>
+          fetch(
+            "https://assignment-10-server-side-ten.vercel.app/addCraftItems"
+          ),
       },
       {
         path: "/artCraftItems/:id",
         element: <ArtCraftItems />,
-        loader: () => fetch("http://localhost:5000/artCraftItems"),
+        loader: () =>
+          fetch(
+            "https://assignment-10-server-side-ten.vercel.app/artCraftItems"
+          ),
       },
       {
         path: "/AddCraftItem",
@@ -53,7 +65,10 @@ const router = createBrowserRouter([
             <MyArtCraftList></MyArtCraftList>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/addCraftItems"),
+        loader: () =>
+          fetch(
+            "https://assignment-10-server-side-ten.vercel.app/addCraftItems"
+          ),
       },
       {
         path: "/updatedItems/:id",
@@ -63,7 +78,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addCraftItems/${params.id}`),
+          fetch(
+            `https://assignment-10-server-side-ten.vercel.app/addCraftItems/${params.id}`
+          ),
       },
       {
         path: "/login",

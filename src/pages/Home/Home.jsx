@@ -10,7 +10,7 @@ const Home = () => {
   const craftItems = useLoaderData();
   const [allArtCraftItems, setAllArtCraftItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/artCraftItems")
+    fetch("https://assignment-10-server-side-ten.vercel.app/artCraftItems")
       .then((res) => res.json())
       .then((data) => setAllArtCraftItems(data));
   }, []);
